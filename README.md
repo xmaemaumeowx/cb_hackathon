@@ -40,13 +40,14 @@ start index.html
 Or manually double-click index.html.
 
 ## 📂 Project Structure
+```bash
 cb_hackathon/
 ├── images/                  # Image assets (pens, crayons, etc.)
 ├── styles.css               # Custom styles
 ├── script.js                # JavaScript logic for theme/cart
 ├── index.html               # Main HTML page
 └── README.md                # This file
-
+```
 ## 🌐 Live Demo
 [Live Preview](to follow)
 
