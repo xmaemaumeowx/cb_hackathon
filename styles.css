@@ -1,0 +1,224 @@
+/* Reset and Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111;
+  font-family: 'Nunito Sans', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Header Styling */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  transition: background-color 0.4s ease;
+}
+body.dark-mode header {
+  background-color: #111;
+}
+
+/* Navbar Styling */
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+body.dark-mode .navbar a {
+  color: #fff;
+}
+
+.navbar-nav .nav-link,
+footer .nav-link {
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link:hover,
+footer .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #d58f80 !important;
+}
+
+/* Hero Section */
+.hero {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: left;
+  align-items: end;
+  padding-left: 60px;
+  transition: background-image 0.4s ease;
+}
+
+body:not(.dark-mode) .hero {
+  background-image: url('/images/tcs_light.png');
+}
+
+body.dark-mode .hero {
+  background-image: url('/images/tcs_dark.png');
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 200;
+  font-family: 'Great Vibes', cursive;
+  color: #d58f80;
+}
+
+.hero-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease;
+}
+
+/* Section Titles */
+h2 {
+  text-align: left;
+  font-family: 'Great Vibes', cursive;
+  color: #d58f80;
+  margin-bottom: 20px;
+}
+h5, h6 {
+  text-align: center;
+}
+h6 {
+  font-weight: 400;
+  color: #d58f80;
+  margin-top: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.img-hover-caption {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-hover-caption img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgb(213, 143, 128);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-hover-caption:hover .caption {
+  opacity: 1;
+}
+
+/* Carousel Styling */
+.carousel-inner img {
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* About and Contact Section Styling */
+.about-section,
+.contact-section {
+  background-color: #fff;
+  color: #111;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode .about-section {
+  background-color: #e4c4bd;
+  color: #1e1e1e;
+}
+
+body.dark-mode .contact-section {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Send Message Button */
+.custom-send-btn {
+  background-color: #d58f80;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .custom-send-btn {
+  background-color: #fff;
+  color: #d58f80;
+  border: 1px solid #d58f80;
+}
+
+.custom-send-btn:hover {
+  background-color: #d58f80;
+  color: white;
+}
+/* Cart */
+.caption {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.caption:hover {
+  background-color: #c87b6f;
+}
+/* theme icon button */
+#themeToggle i {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
