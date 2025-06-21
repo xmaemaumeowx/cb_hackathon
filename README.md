@@ -39,7 +39,7 @@ start index.html
 ```
 Or manually double-click index.html.
 
-##📂 Project Structure
+## 📂 Project Structure
 cb_hackathon/
 ├── images/                  # Image assets (pens, crayons, etc.)
 ├── styles.css               # Custom styles
@@ -47,15 +47,15 @@ cb_hackathon/
 ├── index.html               # Main HTML page
 └── README.md                # This file
 
-##🌐 Live Demo
+## 🌐 Live Demo
 [Live Preview](to follow)
 
-##🙌 Credits
+## 🙌 Credits
 Created by Maureen T. and Alicia M. for a hackathon project.
 
-##📄 License
+## 📄 License
 This project is licensed for educational and demonstration purposes only.
 Not intended for commercial use.
 
-##🤖 AI Assistance
+## 🤖 AI Assistance
 Parts of this project were developed with the help of AI tools, to support debugging and content drafting.
