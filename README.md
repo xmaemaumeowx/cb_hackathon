@@ -69,8 +69,16 @@ If you'd like to replace the **logo**, update the file at:
 ```
 
 For a cohesive brand experience: Use a white or gold palette on dark background
-Consider adding a custom favicon 🧪 Known Issues / To Do Product grid and
-individual product pages Add cart functionality (future) Optimize images for
-performance SEO metadata and structured data 🙋‍♀️ Author Alicia Makena 📄 License
-This project uses the free CakeShop template from Colorlib, adapted under their
-license for personal and educational use.
+Consider adding a custom favicon
+
+---
+
+## 🧪 Known Issues / To Do
+
+1. Product grid and individual product pages
+
+2. Add cart functionality (future)
+
+3. Optimize images for performance
+
+4. SEO metadata and structured data
