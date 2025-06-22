@@ -41,11 +41,12 @@
             <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
            <li class="nav-item">
-            <button class="btn btn-outline-light position-relative me-3" id="cartBtn">
-              <i class="bi bi-cart"></i> Cart
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">
-              </span>
-            </button>
+              <button id="cartBtn" class="btn btn-outline-light position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i class="bi bi-cart-fill"></i>
+                <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                </span>
+              </button>
           </li>
           </ul>
         </div>
@@ -172,13 +173,19 @@
           </iframe>
         </div>
         </div>
-        
+        <!-- Send Message-->
         <div class="col-md-6">
           <h2>Send a Message</h2>
-          <form>
-            <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name" /></div>
-            <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email" /></div>
-            <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
+          <form id="contactForm">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="contactName" placeholder="Your Name" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" id="contactEmail" placeholder="Your Email" required />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your Message" required></textarea>
+            </div>
             <button type="submit" class="btn custom-send-btn" id="contactSubmitBtn">Send Message</button>
           </form>
         </div>
@@ -239,17 +246,49 @@
     </div>
   </div>
 </footer>
-<!-- Toast Container -->
+<!-- Toast for Cart -->
+<div class="toast-container">
+  <div id="cartToast" class="toast bg-success text-white position-relative" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+    <div class="toast-body">
+      Item added to cart!
+    </div>
+    </div>
+</div>
+<!-- Success Toast -->
 <div class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
-  <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="d-flex">
-      <div class="toast-body">
-        Item added to cart!
-      </div>
-      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  <div id="contactToastSuccess" class="toast bg-success text-white" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+      Message sent successfully!
     </div>
   </div>
-</div>  
+
+  <!-- Error Toast -->
+  <div id="contactToastError" class="toast bg-danger text-white" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body" id="errorToastMsg">
+      <!-- Error message will be injected by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- View Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="cartItems">
+        <p class="text-muted">Your cart is empty.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="clearCartBtn" class="btn btn-danger">Clear Cart</button>
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- JS Scripts -->
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

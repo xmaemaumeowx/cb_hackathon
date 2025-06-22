@@ -222,3 +222,39 @@ body.dark-mode .custom-send-btn {
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
+/* Toast Container Position */
+.toast-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+/* Close button placement inside toast */
+.toast .btn-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+/* Highlight fields with validation errors */
+.is-invalid {
+  border: 1px solid #dc3545 !important;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Simple animation for invalid input shake */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Smooth toast fade in/out */
+.toast {
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
