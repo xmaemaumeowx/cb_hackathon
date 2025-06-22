@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleBtn.addEventListener('click', toggleTheme);
 
   // ===== Contact Form Submit with Validation & Toasts =====
-  const contactForm = document.querySelector("form");
+  const contactForm = document.getElementById("contactForm");
   const contactToastSuccessEl = document.getElementById("contactToastSuccess");
   const contactToastErrorEl = document.getElementById("contactToastError");
   const errorToastMsg = document.getElementById("errorToastMsg");
@@ -95,9 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       // Grab form field values
-      const nameInput = contactForm.querySelector("input[type='text']");
-      const emailInput = contactForm.querySelector("input[type='email']");
-      const messageInput = contactForm.querySelector("textarea");
+      const nameInput = document.getElementById("contactName");
+      const emailInput = document.getElementById("contactEmail");
+      const messageInput = document.getElementById("contactMessage");
 
       const name = nameInput.value.trim();
       const email = emailInput.value.trim();
@@ -114,20 +114,32 @@ document.addEventListener("DOMContentLoaded", () => {
       let hasError = false;
 
       // Validate each input field and mark if invalid
-      if (!name) {
-        nameInput.classList.add("is-invalid");
-        hasError = true;
-      }
+function triggerInvalid(inputElement) {
+  inputElement.classList.remove("is-invalid");
 
-      if (!email || !emailValid) {
-        emailInput.classList.add("is-invalid");
-        hasError = true;
-      }
+  // Force reflow (reset animation)
+  inputElement.offsetHeight;
 
-      if (!message) {
-        messageInput.classList.add("is-invalid");
-        hasError = true;
-      }
+  // Re-add class with short delay
+  setTimeout(() => {
+    inputElement.classList.add("is-invalid");
+  }, 1);
+}
+        if (!name) {
+          triggerInvalid(nameInput);
+          hasError = true;
+        }
+
+        if (!email || !emailValid) {
+          triggerInvalid(emailInput);
+          hasError = true;
+        }
+
+        if (!message) {
+          triggerInvalid(messageInput);
+          hasError = true;
+        }
+
 
       // Show error toast if any fields are invalid
       if (hasError) {

@@ -36,17 +36,16 @@ This is a responsive e-commerce front-end demo for a fictional shop called **The
 
 ---
 
-## 📁 Project Structure (Simplified)
-```
+## 📁 Project Structure 
+```bash
 cb_hackathon/
 ├── index.html
 ├── styles.css
 ├── script.js
-├── /images
-├── /assets (optional)
+├── assets/ (optional)
+│   └── images/
 └── README.md
 ```
-
 ---
 
 ## 📬 Contact Form Email Setup
