@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // Show success toast immediately
     successToast.show(); 
+
     fetch("https://formsubmit.co/ajax/maureenpsah@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -156,6 +157,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok) throw new Error("Failed to send");
       successToast.show();
       contactForm.reset();
+
+      // ✅ Clear previous validation state
+      [nameInput, emailInput, messageInput].forEach(input => {
+        input.classList.remove("is-invalid");
+        input.setCustomValidity && input.setCustomValidity("");
+      });
     })
     .catch(() => {
       errorToastMsg.textContent = "Unable to send. Please try again.";
