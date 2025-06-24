@@ -1,6 +1,6 @@
-# 🧶 The Craft Shop - Hackathon Project
+# 🧶 Artistry - The Craft Shop (Hackathon Project)
 
-This is a responsive e-commerce front-end demo for a fictional shop called **The Craft Shop**, built for a hackathon. It features a product gallery, persistent cart system, dark/light mode toggle, and contact form with validation and toast alerts.
+This is a responsive e-commerce front-end demo for a fictional shop called **Artistry - The Craft Shop**, built for Code Blossom hackathon. It features a product gallery, persistent cart system, dark/light mode toggle, enhanced header layout, and a contact form with validation and toast alerts. This is a project inspired by Colorlib's Cake Shop Theme.
 
 ---
 
@@ -18,35 +18,40 @@ This is a responsive e-commerce front-end demo for a fictional shop called **The
 ### 🎨 Theme Toggle
 - Light/Dark mode with icon toggle
 - Saves user preference using `localStorage`
+- Smooth toggle animations
 
 ### 🛒 Persistent Shopping Cart
 - Click captions to add items
-- Shows toast notification when item is added
-- Items persist across reloads using `localStorage`
-- Modal shows item names + quantities
-- Cart count badge auto-updates
-- Option to clear cart
+- Toast notification on add with quantity
+- Cart persists across reloads using `localStorage`
+- Modal displays item names + quantities
+- Dynamic cart count badge
+- "Clear Cart" button with confirmation
+
+### 🧾 Enhanced Header
+- Fixed top contact info section with phone and social links
+- Responsive navbar stacked below the header
+- Adjusted spacing to avoid overlap
 
 ### 📬 Contact Form
 - Form validation (name, email, message required)
-- Email regex validation
-- Invalid fields are highlighted
-- AJAX-based submission using [FormSubmit](https://formsubmit.co/)
-- Success & error toasts with animation
+- Email format checking via regex
+- Invalid fields animate on error
+- AJAX submission using [FormSubmit](https://formsubmit.co/)
+- Toast-based success & error feedback
 
 ---
 
 ## 📁 Project Structure 
 ```bash
 cb_hackathon/
-├── index.html
-├── styles.css
-├── script.js
-├── assets/ (optional)
-│   └── images/
+├── index.html         # Main page
+├── styles.css         # Custom CSS (split by section)
+├── script.js          # All logic (theme, cart, contact, toasts)
+├── assets/
+│   └── images/        # All images used (e.g. product, blog, etc.)
 └── README.md
-```
----
+
 
 ## 📬 Contact Form Email Setup
 1. Go to [Formsubmit](https://formsubmit.co/)
