@@ -551,3 +551,37 @@ textarea.form-control.is-invalid {
   height: 250px;
   object-fit: cover;
 }
+/* Carousel image styles */
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .testimonial-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-img {
+    width: 90px;
+    height: 90px;
+  }
+}
+.testimonial-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
