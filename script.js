@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Contact form
   const contactForm = document.getElementById("contactForm");
+  const entsuccessToast = new bootstrap.Toast(document.getElementById("contactToastSending"), { autohide: true, delay: 3000 });
   const successToast = new bootstrap.Toast(document.getElementById("contactToastSuccess"), { autohide: true, delay: 3000 });
   const errorToast = new bootstrap.Toast(document.getElementById("contactToastError"), { autohide: true, delay: 4000 });
   const errorToastMsg = document.getElementById("errorToastMsg");
@@ -145,8 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
       errorToast.show();
       return;
     }
-    // Show success toast immediately
-    successToast.show(); 
+    // Show message that form is being sent
+    entsuccessToast.show(); 
 
     fetch("https://formsubmit.co/ajax/maureenpsah@gmail.com", {
       method: "POST",
