@@ -40,14 +40,10 @@ This is a responsive e-commerce front-end demo for a fictional shop called **Art
 - AJAX submission using [FormSubmit](https://formsubmit.co/)  
 - Toast-based success & error feedback  
 
----
-
-## 📖 About Section
+### 📖 About Section
 A brief, warm introduction that captures the essence of the shop, highlighting its passion for handmade, artistic, and quality craft supplies. This section helps users connect emotionally with the brand and understand its mission. The layout is clean and centered, accompanied by visual flair and subtle animations.
 
----
-
-## 💬 Testimonials Section
+### 💬 Testimonials Section
 Customer feedback carousel featuring real reviews in card format. Built using Bootstrap's carousel component, it includes:
 - Responsive cards with customer images, names, and quotes  
 - Smooth transitions and auto-play  
@@ -55,9 +51,7 @@ Customer feedback carousel featuring real reviews in card format. Built using Bo
 
 This section helps build trust and showcases customer satisfaction visually.
 
----
-
-## 📝 Blog Section
+### 📝 Blog Section
 A blog preview grid displaying short snippets from recent posts or crafting tips. Features:
 - Responsive layout with cards  
 - Each card includes an image, title, short excerpt, and "Read More" button  
