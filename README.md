@@ -98,7 +98,7 @@ Open index.html manually or via Live Server (VS Code)
 
 ---
 ## 🌐 Live Demo
-[Live Preview](to follow)
+[Live Preview] https://artistrythecraftshop.netlify.app/
 
 ## 🙌 Credits
 Created by Maureen T. and Alicia M. for a hackathon project.
