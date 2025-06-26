@@ -110,6 +110,7 @@ Not intended for commercial use.
 ## 🤖 AI Acknowledgment
 Parts of this project were developed with the help of AI tools, to support debugging and content drafting.
 Majority of images used were AI generated images through canva.com
+
 ---
 
 ## 🛡 Shields
